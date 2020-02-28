@@ -43,21 +43,27 @@ class TrailerViewController: UIViewController, WKUIDelegate {
                      // TODO: Store the movies in a property to use elsewhere
                      // TODO: Reload your table view data
                     print(dataDictionary)
+                    
+                
+                            let result = self.movies[0]
+                    let key = result["key"] as! CVarArg
+                            print(key)
+                 let stringKey = String(format: "%@", key)
+                 
+                 
+                let myURL = URL(string:"https://www.youtube.com/watch?v=\(stringKey)")
+                        let myRequest = URLRequest(url: myURL!)
+                    self.webView.load(myRequest)
                   }
                }
                task.resume()
         
-         let key = movies["key"] as! [[String: Any]]
-         print(key)
-        /*
-        let stringKey = String(format: "%@", key)
         
         
-       let myURL = URL(string:"https://www.youtube.com/watch?v=\(stringKey)")
-               let myRequest = URLRequest(url: myURL!)
-               webView.load(myRequest)
-        */
-       //print(movie["id"])
+        
+
+        
+
         
     }
     
