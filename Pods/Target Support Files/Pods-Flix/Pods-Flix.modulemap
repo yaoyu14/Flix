@@ -1,4 +1,4 @@
-framework module Pods_Flix {
+module Pods_Flix {
   umbrella header "Pods-Flix-umbrella.h"
 
   export *
